@@ -12,7 +12,7 @@ Both apps import each other's exposed routes to render a single UI to the user t
 
 Routing and passing of application configuration occurs in the respective `App.tsx`. The initial plan was to use shared react context to pass global state from the rendered app to remote apps, but issues (#1, #7) made it simpler to pass shared data as props to rendered components.
 
-`settings/src/pages/SettingsPage` allows to set the `configuration` cookie, which can override the default configuration defined in `host/src/config.ts`. The cookie based configuration can also be used to define the applications' hosts with the properties `hostAppHost` and `settingsAppHost`. This allows to easily mix & match different federations in any deployment, simplifying local development (only spin up the application you are working on and use the current production application code for the rest) and E2E testing.
+`settings/src/pages/SettingsPage` allows to set the `configuration` cookie, which can override the default configuration defined in `host/src/config.ts`.
 
 ## Module federation specific code
 
